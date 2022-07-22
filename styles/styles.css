@@ -107,6 +107,10 @@ body {
     width: 100%;
     background: var(--slider-background);
     display: flex;
+    height: 600px;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items:center
 }
 
 .main-header {
@@ -116,6 +120,9 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--main-header-color);
+    text-align: center;
+    width: 696px;
+    margin: 200px 452px 0 452px;
 }
 
 .order-button {
@@ -128,6 +135,7 @@ body {
     font-size: 16px;
     line-height: 1.8;
     color: var(--main-header-color);
+    margin-top: 30px;
 }
 
 /* section2 */
@@ -140,6 +148,13 @@ body {
     list-style: none;
     display: flex;
     margin-top: 94px;
+    justify-content: center;
+}
+
+.table {
+    width: 270px;
+    height: 100px;
+    margin-right: 30px;
 }
 
 .table-items {
@@ -290,7 +305,7 @@ body {
 
 .projects-block {
     box-sizing: border-box;
-    background: #FFFFFF;
+    background: var(--main-header-color);
     border: 1px solid #EEEEEE;
 }
 
