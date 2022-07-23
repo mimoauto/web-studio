@@ -19,7 +19,7 @@ body {
 }
 
 .content {
-    width: 1600px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -29,6 +29,8 @@ body {
     display: flex;
     height: 80px;
     align-items: center;
+    border-bottom-style: solid;
+    border-bottom-color: #ECECEC;
 }
 
 .logo {
@@ -71,6 +73,8 @@ body {
 .menu-nav-link {
     text-decoration: none;
     color: var(--main-text-color);
+    transition: 0.18s;
+    transition-timing-function: ease-in-out;
 }
 
 .menu-nav-link:hover,
@@ -82,7 +86,7 @@ body {
     list-style-type: none;
     font-size: 14px;
     padding: 0;
-    
+
 }
 
 .contacts-item-mail {
@@ -101,6 +105,8 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: 0.18s;
+    transition-timing-function: ease-in-out;
 }
 
 .contacts-item:hover,
@@ -325,9 +331,30 @@ body {
 
 /* filter */
 
+.main {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 94px;
+}
+
+.maint-content-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1170px;
+}
+
+.main-content {
+    margin-top: 94px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 34px;
+}
+
 .filter {
     list-style: none;
     display: flex;
+    margin: 0;
 }
 
 .filter-button {
@@ -338,23 +365,38 @@ body {
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.03em;
+    border: none;
+    margin-right: 8px;
+    padding: 6px 22px 6px 22px;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
 }
 
 .filter-button:hover,
 .filter-button:focus {
     background: var(--logo-color);
+    filter: drop-shadow(0 4px 2px gray);
 }
 
 /* projects */
 
 .projects {
     list-style: none;
+    columns: 3;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .projects-block {
     box-sizing: border-box;
     background: var(--main-header-color);
     border: 1px solid #EEEEEE;
+    margin-bottom: 30px;
+    width: 370px;
+    height: 404px;
 }
 
 .projects-header {
