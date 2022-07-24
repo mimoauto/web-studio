@@ -29,8 +29,10 @@ body {
     display: flex;
     height: 80px;
     align-items: center;
+    justify-content: center;
     border-bottom-style: solid;
     border-bottom-color: #ECECEC;
+    justify-content: space-around;
 }
 
 .logo {
@@ -47,7 +49,8 @@ body {
 .logo-link {
     text-decoration: none;
     margin-right: 90px;
-    padding-left: 215px;
+    width: 18%;
+    min-width: 142px;
 }
 
 .logo-web {
@@ -57,12 +60,16 @@ body {
 .menu-nav {
     list-style: none;
     display: flex;
-    margin-right: 280px;
     font-size: 14px;
+    width: 50%;
+    min-width: 250px;
+    max-width: 400px;
+    justify-content: space-around;
+    padding: 0;
+    gap: 50px;
 }
 
 .menu-nav-item {
-    margin-right: 50px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -86,16 +93,33 @@ body {
     list-style-type: none;
     font-size: 14px;
     padding: 0;
-
+    display: flex;
+    gap: 50px;
+    margin: 0;
 }
 
 .contacts-item-mail {
     display: inline;
-    margin-right: 50px;
 }
 
 .contacts-item-phone {
     display: inline;
+}
+
+@media screen and (max-width: 820px) {
+    .contacts {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-nav {
+        gap: 10px;
+        min-width: 190px;
+    }
+
+    .logo-link {
+        margin-right: 10px;
+    }
 }
 
 .contacts-item {
@@ -117,12 +141,12 @@ body {
 /* section1 */
 
 .service {
-    width: 100%;
     background: var(--slider-background);
     display: flex;
     height: 600px;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    min-width: 693px;
 }
 
 .main-header {
@@ -133,8 +157,8 @@ body {
     text-transform: uppercase;
     color: var(--main-header-color);
     text-align: center;
-    width: 696px;
-    margin: 200px 452px 0 452px;
+    max-width: 696px;
+    margin-top: 200px;
 }
 
 .order-button {
@@ -150,6 +174,22 @@ body {
     margin-top: 30px;
 }
 
+@media screen and (max-width: 400px) {
+    .service {
+        width: 400px;
+        min-width: 440px;
+    }
+
+    .main-header {
+        min-width: 440px;
+        font-size: 30px;
+    }
+
+    .lower-content {
+        width: 440px;
+    }
+}
+
 /* section2 */
 
 .services-header {
@@ -159,8 +199,9 @@ body {
 .table-of-contents {
     list-style: none;
     display: flex;
-    margin-top: 94px;
+    margin: 94px 0 0 0;
     justify-content: center;
+    padding-bottom: 94px;
 }
 
 .table {
@@ -188,8 +229,6 @@ body {
 /* section 3  */
 
 .occupation {
-    margin-top: 94px;
-    display: block;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -206,10 +245,11 @@ body {
     display: flex;
     font-weight: var(--premain-font-weight);
     padding: 0;
-}
-
-.box2 {
-    padding: 0 30px 0 30px;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    min-width: 370px;
 }
 
 /* section 4  */
@@ -217,7 +257,6 @@ body {
 .team {
     background: var(--background-of-team);
     margin-top: 94px;
-    padding-bottom: 94px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -242,6 +281,11 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    padding-bottom: 94px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    min-width: 270px;
 }
 
 .team-members-block {
@@ -249,7 +293,7 @@ body {
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    margin-right: 30px;
+
 }
 
 .name {
@@ -277,6 +321,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding-left: 215px;
 }
 
 .content-logo {
@@ -286,7 +331,6 @@ body {
 .logo-footer {
     width: 145px;
     height: 31px;
-    padding-left: 215px;
     top: 2157px;
     font-family: var(--logo-font-family);
     font-weight: var(--premain-font-weight);
@@ -300,8 +344,14 @@ body {
     color: var(--main-header-color);
 }
 
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .company-location {
-    padding: 20px 0px 0px 215px;
+    padding-top: 20px;
     width: 231px;
     margin: 0;
 }
@@ -323,6 +373,13 @@ body {
     font-style: normal;
     text-decoration: none;
     color: var(--contact-color-footer);
+}
+
+@media screen and (max-width: 400px) {
+    .lower-content {
+        padding-left: 50px;
+        width: 390px;
+    }
 }
 
 /* portfolio */
@@ -380,19 +437,18 @@ body {
 
 .projects {
     list-style: none;
-    columns: 3;
-    justify-content: space-between;
-    flex-direction: column;
+    display: flex;
     gap: 30px;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .projects-block {
     box-sizing: border-box;
     background: var(--main-header-color);
     border: 1px solid #EEEEEE;
-    margin-bottom: 30px;
     width: 370px;
     height: 404px;
 }
