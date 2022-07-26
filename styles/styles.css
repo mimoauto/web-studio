@@ -132,7 +132,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-width: 693px;
-    background-image: linear-gradient(to top, transparent, rgba(47, 48, 58, 0.4)), url(/images/Img.png);
+    background-image: linear-gradient(to top, transparent, rgba(47, 48, 58, 0.4)), url(../images/Img.png);
     background-repeat: no-repeat;
     background-position: center;
 
