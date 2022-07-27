@@ -123,6 +123,16 @@ body {
     color: var(--logo-color);
 }
 
+.contacts-logo {
+    padding-right: 10px;
+    transition: 0.18s;
+    transition-timing-function: ease-in-out;
+}
+
+.contacts-item:hover .contacts-logo {
+    filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
 /* section1 */
 
 .service {
@@ -471,7 +481,6 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 20px 0px;
-    /* width: 206px; */
     margin: 0;
     gap: 10px;
 }
