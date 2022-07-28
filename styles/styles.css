@@ -17,6 +17,7 @@ body {
     --background-of-team: #F5F4FA;
     --contact-color-footer: rgba(255, 255, 255, 0.6);
     --background-hover-order-button: #188CE8;
+    --modal-input-border: rgba(33, 33, 33, 0.2);
 }
 
 .content {
@@ -535,6 +536,7 @@ body {
     .footer-social-bloc {
         padding: 10px 0 20px 50px;
     }
+
     .footer-social-header {
         padding-top: 10px;
     }
@@ -565,6 +567,170 @@ body {
     }
 }
 
+
+/* modal */
+
+.modal-bgd {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(35, 35, 46, 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-form-container {
+    background: #fff;
+    padding: 32px 40px 60px 40px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-form-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    padding: 15px 0 12px 0;
+    margin: 0;
+}
+
+.modal-form-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.modal-form-field i {
+    position: absolute;
+}
+
+.icon {
+    padding: 25px 0 0 10px;
+    min-width: 40px;
+    color: black;
+}
+
+.modal-form-field:hover .modal-field-input {
+    border-color: var(--background-hover-order-button);
+}
+
+.modal-form-field:hover .icon {
+    color: var(--background-hover-order-button);
+}
+
+.modal-form-field:hover #comment-area {
+    border-color: var(--background-hover-order-button)
+}
+
+.modal-field-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--contact-color);
+}
+
+.modal-field-input {
+    box-sizing: border-box;
+    border: 1px solid var(--modal-input-border);
+    border-radius: 4px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--main-text-color);
+    padding: 4px 8px;
+    text-align: center;
+}
+
+.modal-field-input-comment {
+    box-sizing: border-box;
+    border: 1px solid var(--modal-input-border);
+    border-radius: 4px;
+    height: 120px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--main-text-color);
+    padding: 0px 8px;
+}
+
+#comment-area::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    padding: 0;
+    margin: 0;
+}
+
+#comment-area {
+    border-radius: 4px;
+}
+
+.accept-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--contact-color);
+}
+
+.modal-form-btn {
+    width: 200px;
+    height: 50px;
+    background: var(--logo-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: var(--premain-font-weight);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--main-header-color);
+    margin-top: 30px;
+    border: none;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 27px;
+    font-size: 20px;
+    color: var(--main-text-color);
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-width: 1px;
+}
+
+.accept-terms {
+    color: var(--logo-color);
+}
+
+.modal-active {
+    opacity: 1;
+    pointer-events: all;
+}
 
 /* portfolio */
 

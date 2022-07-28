@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>WebStudio</title>
   </head>
   <body>
@@ -36,14 +40,23 @@
       <div>
         <ul class="contacts">
           <li class="contacts-item-mail">
-            
-            <a href="mailto:info@devstudio.com" class="contacts-item"
-              > <img class="contacts-logo" src="./images/maillogo.svg" alt="maillogo"> info@devstudio.com</a
+            <a href="mailto:info@devstudio.com" class="contacts-item">
+              <img
+                class="contacts-logo"
+                src="./images/maillogo.svg"
+                alt="maillogo"
+              />
+              info@devstudio.com</a
             >
           </li>
           <li class="contacts-item-phone">
-            <a href="tel:+380961111111" class="contacts-item"
-              > <img class="contacts-logo" src="./images/phonelogo.svg" alt="phonelogo"> +38 096 111 11 11</a
+            <a href="tel:+380961111111" class="contacts-item">
+              <img
+                class="contacts-logo"
+                src="./images/phonelogo.svg"
+                alt="phonelogo"
+              />
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -55,7 +68,9 @@
 
       <section class="service">
         <h1 class="main-header">Effective solutions for your business</h1>
-        <button class="order-button" type="button">Order service</button>
+        <button class="order-button" id="open-modal-form-btn" type="button">
+          Order service
+        </button>
         <div class="overlay"></div>
       </section>
 
@@ -451,5 +466,80 @@
         </ul>
       </div>
     </footer>
+
+    <!-- modal -->
+
+    <div class="modal-bgd" id="form-modal">
+      <div class="modal-form-container">
+        <button class="close-button">x</button>
+        <form action="#" class="modal-form" data-netlify="true" id="form">
+          <h5 class="modal-form-title">
+            Leave your details, we will call you back
+          </h5>
+          <div class="modal-form-field">
+            <label for="user-name" class="modal-field-name">Name</label>
+            <i class="fa fa-user icon"></i>
+            <input
+              required
+              type="text"
+              class="modal-field-input"
+              id="user-name"
+              name="Name"
+            />
+          </div>
+          <div class="modal-form-field">
+            <label for="user-phone" class="modal-field-name">Phone</label>
+            <i class="fa fa-phone icon"></i>
+            <input
+              required
+              type="tel"
+              class="modal-field-input"
+              id="user-phone"
+              name="Phone"
+            />
+          </div>
+          <div class="modal-form-field">
+            <label for="user-email" class="modal-field-name">Email</label>
+            <i class="fa fa-envelope icon"></i>
+            <input
+              required
+              type="email"
+              class="modal-field-input"
+              id="user-email"
+              name="Email"
+            />
+          </div>
+          <div class="modal-form-field">
+            <label for="user-comment" class="modal-field-name">Comment</label>
+            <!-- <input -->
+            <textarea
+              placeholder="Input text"
+              name="user-comment-area"
+              id="comment-area"
+              cols="10"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="modal-form-field-checkbox">
+            <input
+              required
+              type="checkbox"
+              class="modal-field-checkbox"
+              id="user-checkbox"
+              name="accept"
+            />
+            <label for="accept">
+              <span class="accept-title"
+                >I agree to the newsletter and accept</span
+              >
+              <a href="#" class="accept-terms">the terms of contract</a></label
+            >
+          </div>
+          <button class="modal-form-btn" id="send">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./form.js"></script>
   </body>
 </html>
