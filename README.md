@@ -1,2 +1,2 @@
-https://mimoauto.github.io/goit-markup-hw-02/
+https://mimoauto.github.io/web-studio/
 # goit-markup-hw-02
